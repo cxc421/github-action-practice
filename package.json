@@ -2,9 +2,10 @@
   "name": "github-action-practice",
   "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.js -o dist",
     "bump": "npm version patch"
   },
   "repository": {
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/cxc421/github-action-practice/issues"
   },
-  "homepage": "https://github.com/cxc421/github-action-practice#readme"
+  "homepage": "https://github.com/cxc421/github-action-practice#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.30.0",
+    "axios": "^0.21.1"
+  }
 }

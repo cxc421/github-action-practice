@@ -1,7 +1,7 @@
-name: 'Hello Wolrd'
-description: 'Saying hello to the world!'
-author: 'Chris Chuang <chrischuang0421@gmail.com>'
+name: "Hello Wolrd"
+description: "Saying hello to the world!"
+author: "Chris Chuang <chrischuang0421@gmail.com>"
 
-runs: 
-  using: 'node12'
-  main: 'index.js'
+runs:
+  using: "node12"
+  main: "dist/index.js"
