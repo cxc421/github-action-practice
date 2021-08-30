@@ -3271,6 +3271,7 @@ async function run() {
   );
   const firstEntry = response.data[0];
   console.log(`${firstEntry.character}: ${firstEntry.quote}`);
+  core.setOutput("quote", firstEntry);
 }
 
 run();
