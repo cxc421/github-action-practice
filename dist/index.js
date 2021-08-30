@@ -3261,12 +3261,13 @@ var __webpack_exports__ = {};
 const axios = __nccwpck_require__(545);
 const core = __nccwpck_require__(186);
 
-async function run() {
-  const character = core.getInput("character", { required: false });
-  console.log(character);
+const DEFAULT_CHARACTER = "amy";
 
+async function run() {
+  const character =
+    core.getInput("character", { required: false }) || DEFAULT_CHARACTER;
   const response = await axios.get(
-    "https://futuramaapi.herokuapp.com/api/characters/zapp-brannigan/1"
+    `https://futuramaapi.herokuapp.com/api/characters/${character}/1`
   );
   const firstEntry = response.data[0];
   console.log(`${firstEntry.character}: ${firstEntry.quote}`);
