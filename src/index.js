@@ -10,7 +10,9 @@ async function run() {
 
   core.debug(`[Futurama] Input Character: ${character}`);
   core.debug(
-    `[Futurama] AVAILABLE_CHARACTERS: ${JSON.stringify([...DEFAULT_CHARACTER])}`
+    `[Futurama] AVAILABLE_CHARACTERS: ${JSON.stringify([
+      ...AVAILABLE_CHARACTERS,
+    ])}`
   );
 
   if (!AVAILABLE_CHARACTERS.has(character)) {
