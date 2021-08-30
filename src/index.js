@@ -8,10 +8,17 @@ async function run() {
   const character =
     core.getInput("character", { required: false }) || DEFAULT_CHARACTER;
 
+  core.debug(`[Futurama] Input Character: ${character}`);
+  core.debug(
+    `[Futurama] AVAILABLE_CHARACTERS: ${JSON.stringify([...DEFAULT_CHARACTER])}`
+  );
+
   if (!AVAILABLE_CHARACTERS.has(character)) {
     core.setFailed(`Unknown character: ${character}`);
     return;
   }
+
+  core.debug(`[Futurama] Retrieving quote for: ${character}`);
 
   const response = await axios.get(
     `https://futuramaapi.herokuapp.com/api/characters/${character}/1`

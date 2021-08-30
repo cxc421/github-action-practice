@@ -33,8 +33,8 @@ jobs:
         id: futurama
 
       # Test failed command
-      - uses: ./
-        with:
-          character: fry
+      # - uses: ./
+      #   with:
+      #     character: fry
 
       - run: echo ${{steps.futurama.outputs.quote}}
