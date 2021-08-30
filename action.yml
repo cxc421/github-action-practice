@@ -2,6 +2,11 @@ name: "Hello Wolrd"
 description: "Saying hello to the world!"
 author: "Chris Chuang <chrischuang0421@gmail.com>"
 
+inputs:
+  character:
+    description: "Futurama character"
+    default: "dr-zoidberg"
+
 runs:
   using: "node12"
   main: "dist/index.js"
